@@ -1,12 +1,17 @@
 package com.automation.stepDefs;
 
+import com.automation.pages.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LoginSteps {
+
+    LoginPage loginPage = new LoginPage();
+
     @Given("Open browser")
     public void open_browser() {
+        loginPage.doLogin();
     }
 
     @Given("User clicks on  Hello sign in button")
@@ -19,7 +24,6 @@ public class LoginSteps {
 
     @When("User enter {string} address")
     public void user_enter_address(String string) {
-
     }
 
     @Given("Verify user is on sign in page")
