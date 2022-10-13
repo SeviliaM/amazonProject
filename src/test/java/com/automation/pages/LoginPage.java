@@ -17,6 +17,7 @@ public class LoginPage extends BasePage {
     @FindBy(id = "signInSubmit")
     WebElement signIn;
 
+
     public void doLogin() {
         helloSignIn.click();
         emailOrPhone.sendKeys(ConfigReader.getProperty("email"));
@@ -24,4 +25,6 @@ public class LoginPage extends BasePage {
         password.sendKeys(ConfigReader.getProperty("password"));
         signIn.click();
     }
+
+
 }

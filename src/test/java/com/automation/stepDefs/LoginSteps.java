@@ -16,29 +16,22 @@ public class LoginSteps {
 
     @Given("User clicks on  Hello sign in button")
     public void user_clicks_on_hello_sign_in_button() {
+
     }
 
-    @Given("User clicks on {string} sign in button")
-    public void user_clicks_on_sign_in_button(String string) {
+
+    @When("User enter email address")
+    public void user_enter_address() {
     }
 
-    @When("User enter {string} address")
-    public void user_enter_address(String string) {
+    @When("User enter password")
+    public void user_enter() {
     }
 
     @Given("Verify user is on sign in page")
     public void verify_user_is_on_sign_in_page() {
     }
 
-    @When("User enter {string}")
-    public void user_enter(String string) {
-
-    }
-    @When("User enter email{string} address")
-    public void user_enter_address(String email, String password) {
-        System.out.println(email);
-        System.out.println(password);
-    }
 
     @When("User clicks on continue")
     public void user_clicks_on_continue() {
