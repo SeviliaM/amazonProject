@@ -11,12 +11,14 @@ public class LoginSteps {
 
     @Given("Open browser")
     public void open_browser() {
-        loginPage.doLogin();
+
+
     }
 
     @Given("User clicks on  Hello sign in button")
     public void user_clicks_on_hello_sign_in_button() {
-
+        loginPage.chooseSignIn();
+        loginPage.doLogin();
     }
 
 
@@ -38,7 +40,7 @@ public class LoginSteps {
         System.out.println();
     }
 
-    @When("User enter phoneNumber{string}and password{string}")
+    @When("User enter phone number and password")
     public void user_enter(String phoneNumber, String password) {
         System.out.println(phoneNumber);
         System.out.println(password);

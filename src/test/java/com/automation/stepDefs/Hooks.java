@@ -1,16 +1,18 @@
 package com.automation.stepDefs;
 
+import com.automation.utils.ConfigReader;
 import com.automation.utils.DriverUtils;
 import org.junit.After;
 import org.junit.Before;
 
 public class Hooks {
     @Before
-    public void setUp() throws Exception{
+    public void setUp(){
+        ConfigReader.initProperties();
         DriverUtils.createDriver();
     }
     @After
-    public void CleanUP(){
-        System.out.println("After each scenario");
+    public void quit(){
+        DriverUtils.getDriver().quit();
     }
 }
