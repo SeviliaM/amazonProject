@@ -15,15 +15,12 @@ public class LoginSteps {
 
     }
 
-    @Given("User clicks on  Hello sign in button")
-    public void user_clicks_on_hello_sign_in_button() {
-        loginPage.chooseSignIn();
-        loginPage.doLogin();
-    }
 
 
     @When("User enter email address")
     public void user_enter_address() {
+        loginPage.chooseSignIn();
+        loginPage.doLogin();
     }
 
     @When("User enter password")

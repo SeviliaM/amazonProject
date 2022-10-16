@@ -1,27 +1,31 @@
 package com.automation.stepDefs;
 
+import com.automation.pages.LoginPage;
+import com.automation.pages.SearchPage;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class SearchSteps {
+    SearchPage searchPage = new SearchPage();
+
+
     @Given("Open the browser")
     public void open_the_browser() {
     }
 
-    @Then("Verify user is on home page")
-    public void verify_user_is_on_home_page() {
-    }
 
     @When("User clicks on search field")
     public void user_clicks_on_search_field() {
     }
 
-    @When("User enters input")
+    @And("User enters input")
     public void user_enters_input() {
+        searchPage.verifyUserCanSearchItems();
     }
 
-    @When("User clicks on search button")
+    @And("User clicks on search button")
     public void user_clicks_on_search_button() {
     }
 

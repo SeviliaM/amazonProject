@@ -2,7 +2,7 @@ Feature: This feature file allow user to login
 
   Background:
     Given Open browser
-  
+
 
   Scenario: Verify user is able to login with valid email and password
     When User enter email address
