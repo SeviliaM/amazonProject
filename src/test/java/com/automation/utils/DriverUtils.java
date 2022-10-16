@@ -14,8 +14,10 @@ public class DriverUtils {
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-        driver.get(ConfigReader.getProperty("app.baseurl"));
+        driver.navigate().to("https://www.amazon.com/");
+        //driver.get("http://3.129.60.236:8080/bank/login");
 
     }
 

@@ -8,7 +8,7 @@ public class ConfigReader {
 
     public static void initProperties() {
         try {
-            FileReader fr = new FileReader("src/test/resources/data/configdata.properties");
+            FileReader fr = new FileReader("src/test/resources/configdata.properties");
             prop = new Properties();
             prop.load(fr);
         } catch (Exception e) {
@@ -17,6 +17,7 @@ public class ConfigReader {
     }
 
     public static String getProperty(String key) {
+        initProperties();
         return prop.getProperty(key);
     }
 }

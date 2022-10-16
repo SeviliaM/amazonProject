@@ -19,34 +19,33 @@ public class LoginPage extends BasePage {
     WebElement password;
     @FindBy(id = "signInSubmit")
     WebElement signIn;
-    public void verifyUserIsOnHomepage(){
+
+    public void verifyUserIsOnHomepage() {
 
         Assert.assertTrue("Search field is not visible", cartButton.isDisplayed());
     }
 
-public void chooseSignIn() {
+    public void chooseSignIn() {
 
-
-    cartButton.click();
-
+        cartButton.click();
 
    /* Actions actions = new Actions(driver);
     actions.moveToElement(cartButton);
     actions.build().perform();
 
-
     actions.moveToElement(helloSignIn);
     actions.click().build().perform();*/
 
-}
+    }
 
     public void doLogin() {
 
-        emailOrPhone.sendKeys(ConfigReader.getProperty("email"));
+     emailOrPhone.sendKeys(ConfigReader.getProperty("email"));
         continueBtn.click();
         password.sendKeys(ConfigReader.getProperty("password"));
         signIn.click();
+
+
+
     }
-
-
 }
